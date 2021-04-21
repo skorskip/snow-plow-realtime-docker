@@ -1,0 +1,37 @@
+{
+    "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+        "description": "Schema for an task click",
+        "self": {
+            "vendor": "com.test",
+            "name": "task_click",
+            "format": "jsonschema",
+            "version": "1-0-0"
+        },
+
+        "type": "object",
+        "properties": {
+            "classList": {
+                "type": "string",
+                "maxLength": 255
+            },
+            "eventType": {
+                "type": "string",
+                "maxLength": 255
+            },
+            "objectId": {
+                "type": "string",
+                "maxLength": 255
+            },
+            "tagType": {
+                "type": "string",
+                "maxLength": 255
+            },
+            "timestampField": {
+                "type": "string",
+                "format": "date-time"
+            }
+        },
+        "minProperties":1,
+        "required": ["classList", "eventType"],
+        "additionalProperties": false
+}
